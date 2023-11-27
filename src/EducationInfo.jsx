@@ -1,7 +1,7 @@
 export default function EducationInfo() {
 	return (
 		<div>
-			<form key="education-form" className="form-control p-3 my-2">
+			<form key="education-form" className="form-control p-3 m-2">
 				<label htmlFor="school-input" className="form-label mx-2">
 					School:
 				</label>
@@ -55,7 +55,7 @@ export default function EducationInfo() {
 				</button>
 				<button
 					type="button"
-					className="btn btn-info m-2 text-success border-success"
+					className="btn btn-info m-2 text-white border-white"
 				>
 					Cancel
 				</button>

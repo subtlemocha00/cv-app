@@ -1,7 +1,7 @@
 export default function EmploymentInfo() {
 	return (
 		<div>
-			<form key="employment-form" className="form-control p-3 my-2">
+			<form key="employment-form" className="form-control p-3 m-2">
 				<label htmlFor="company-name" className="form-label mx-2">
 					Company:
 				</label>
@@ -55,7 +55,7 @@ export default function EmploymentInfo() {
 				</button>
 				<button
 					type="button"
-					className="btn btn-info m-2 text-success border-success"
+					className="btn btn-info m-2 text-white border-white"
 				>
 					Cancel
 				</button>

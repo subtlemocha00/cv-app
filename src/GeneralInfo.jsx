@@ -1,6 +1,6 @@
 export default function GeneralInfo() {
 	return (
-		<form key="general-form" className="form-control p-3 mb-2">
+		<form key="general-form" className="form-control p-3 m-2">
 			<label htmlFor="name-input" className="form-label mx-2">
 				Name:
 			</label>
@@ -37,7 +37,7 @@ export default function GeneralInfo() {
 			</button>
 			<button
 				type="button"
-				className="btn btn-info m-2 text-success border-success"
+				className="btn btn-info m-2 text-white border-white"
 			>
 				Cancel
 			</button>

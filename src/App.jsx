@@ -1,9 +1,10 @@
 import "./App.css";
+import "./ResumeComponents/ResumeDisplay.css";
+import ResumeDisplay from "./ResumeComponents/ResumeDisplay.jsx";
 import EducationInfo from "./EducationInfo.jsx";
-import EmploymentInfo from "./EmploymentInfo.jsx";
-import GeneralInfo from "./GeneralInfo.jsx";
-import ResumeDisplay from "./ResumeDisplay.jsx";
+import EmploymentInfo from "./EmploymentInfo";
 import TitleBlock from "./TitleBlock.jsx";
+import GeneralInfo from "./GeneralInfo.jsx";
 
 function App() {
 	return (

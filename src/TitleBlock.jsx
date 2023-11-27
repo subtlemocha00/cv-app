@@ -8,7 +8,6 @@ const users = [
 ];
 
 export default function TitleBlock() {
-	console.log(users[0].id);
 	return (
 		<div className="text-center m-0 p-3 bg-info text-white">
 			<h1>CV Builder</h1>
