@@ -5,6 +5,7 @@ import EducationInfo from "./EducationInfo.jsx";
 import EmploymentInfo from "./EmploymentInfo";
 import TitleBlock from "./TitleBlock.jsx";
 import GeneralInfo from "./GeneralInfo.jsx";
+import defaultData from "./default-data.js";
 
 function App() {
 	return (
@@ -16,7 +17,11 @@ function App() {
 					<EducationInfo />
 					<EmploymentInfo />
 				</div>
-				<ResumeDisplay />
+				<ResumeDisplay
+					personalInfo={defaultData[0].personalInfo}
+					employmentInfo={defaultData[0].employmentInfo}
+					educationInfo={defaultData[0].educationInfo}
+				/>
 			</div>
 		</div>
 	);
