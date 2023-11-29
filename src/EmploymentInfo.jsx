@@ -47,6 +47,16 @@ export default function EmploymentInfo() {
 					className="form-control"
 					placeholder="Present"
 				></input>
+				<label htmlFor="job-skills" className="form-label mx-2">
+					Job Skills
+				</label>
+
+				<textarea
+					name="job-skills"
+					className="form-control"
+					placeholder="Detail your key responsibilities and achievements, e.g., 'Managed a team of 10 in developing marketing strategies, resulting in a 20% increase in annual sales."
+				></textarea>
+
 				<button
 					type="button"
 					className="btn btn-info m-2 text-white border-white"
