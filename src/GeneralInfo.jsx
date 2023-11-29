@@ -30,6 +30,7 @@ export default function GeneralInfo() {
 				placeholder="555-123-4567"
 			></input>
 			<button
+				// onClick={updateGeneral()}
 				type="button"
 				className="btn btn-info m-2 text-white border-white"
 			>

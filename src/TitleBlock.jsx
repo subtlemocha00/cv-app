@@ -11,14 +11,6 @@ export default function TitleBlock() {
 	return (
 		<div className="text-center m-0 p-3 bg-info text-white">
 			<h1>CV Builder</h1>
-			<select className="form-select" type="dropdown">
-				<option value="Select User">Select User</option>
-				{users.map((user) => (
-					<option value={user.name} key={user.id}>
-						{user.name}
-					</option>
-				))}
-			</select>
 		</div>
 	);
 }
