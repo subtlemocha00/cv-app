@@ -1,30 +1,27 @@
-export default function EmploymentContent() {
-	const jobInfo = [
-		{
-			company: "Red Star Capital",
-			title: "Space Harvester",
-			city: "Planet X",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "2112" },
-			endDate: { month: "Dec", year: "2112" },
-			skills: [
-				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, illo aliquid animi voluptate odit maiores?",
-				"Modi consectetur voluptate tempore voluptatem quod, perferendis architecto magni sequi temporibus quo repellat quibusdam voluptatum?",
-			],
-		},
-		{
-			company: "Blue Star Capital",
-			title: "Orbital Collector",
-			city: "Planet Y",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "1000010" },
-			endDate: { month: "Dec", year: "1000011" },
-			skills: [
-				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, illo aliquid animi voluptate odit maiores?",
-				"Modi consectetur voluptate tempore voluptatem quod, perferendis architecto magni sequi temporibus quo repellat quibusdam voluptatum?",
-			],
-		},
-	];
+import PropTypes from "prop-types";
+
+export default function EmploymentContent({ employmentInfo }) {
+	EmploymentContent.propTypes = {
+		employmentInfo: PropTypes.arrayOf(
+			PropTypes.shape({
+				company: PropTypes.string,
+				title: PropTypes.string,
+				city: PropTypes.string,
+				country: PropTypes.string,
+				startDate: PropTypes.shape({
+					month: PropTypes.string,
+					year: PropTypes.string,
+				}),
+				endDate: PropTypes.shape({
+					month: PropTypes.string,
+					year: PropTypes.string,
+				}),
+				skills: PropTypes.arrayOf(PropTypes.string),
+			})
+		),
+	};
+
+	const jobInfo = [...employmentInfo];
 	return (
 		<section>
 			<h3 className="bg-secondary row m-0 mt-1 p-3 text-white col col-12">

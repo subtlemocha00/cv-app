@@ -1,30 +1,27 @@
-export default function EducationContent() {
-	const educationInfo = [
-		{
-			university: "Syrinx University",
-			title: "Spice Specialist",
-			city: "Xanadu",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "2102" },
-			endDate: { month: "Dec", year: "2106" },
-			skills: [
-				"Modi consectetur voluptate tempore voluptatem quod, perferendis architecto magni sequi temporibus quo repellat quibusdam voluptatum?",
-				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, illo aliquid animi voluptate odit maiores?",
-			],
-		},
-		{
-			university: "Signals College",
-			title: "Orbital Collection",
-			city: "Planet Y",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "0111110" },
-			endDate: { month: "Dec", year: "1000000" },
-			skills: [
-				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, illo aliquid animi voluptate odit maiores?",
-				"Modi consectetur voluptate tempore voluptatem quod, perferendis architecto magni sequi temporibus quo repellat quibusdam voluptatum?",
-			],
-		},
-	];
+import PropTypes from "prop-types";
+
+export default function EducationContent(props) {
+	EducationContent.propTypes = {
+		educationInfo: PropTypes.arrayOf(
+			PropTypes.shape({
+				university: PropTypes.string,
+				title: PropTypes.string,
+				city: PropTypes.string,
+				country: PropTypes.string,
+				startDate: PropTypes.shape({
+					month: PropTypes.string,
+					year: PropTypes.string,
+				}),
+				endDate: PropTypes.shape({
+					month: PropTypes.string,
+					year: PropTypes.string,
+				}),
+				skills: PropTypes.arrayOf(PropTypes.string),
+			})
+		),
+	};
+
+	const educationInfo = [...props.educationInfo];
 	return (
 		<section>
 			<h3 className="bg-secondary row m-0 p-3 text-white col col-12">
