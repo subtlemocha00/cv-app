@@ -29,6 +29,15 @@ export default function GeneralInfo() {
 				className="form-control"
 				placeholder="555-123-4567"
 			></input>
+			<label htmlFor="user-location" className="form-label mx-2">
+				Location:
+			</label>
+			<input
+				id="user-location"
+				type="text"
+				className="form-control"
+				placeholder="Cygnus-X1, Milky Way"
+			></input>
 			<button
 				// onClick={updateGeneral()}
 				type="button"
