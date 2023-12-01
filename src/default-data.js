@@ -3,8 +3,8 @@ const defaultData = [
 		personalInfo: [
 			{
 				userName: "Cygnus Atreides",
-				email: "starman2112@lightmail.com",
-				phone: "(555) 555-2112",
+				userEmail: "starman2112@lightmail.com",
+				userPhone: "(555) 555-2112",
 				userLocation: "Sea of Tranquility, Moon",
 			},
 		],
@@ -42,8 +42,8 @@ const defaultData = [
 				title: "Space Harvester",
 				city: "Planet X",
 				country: "Alpha Centauri",
-				startDate: { month: "Jan", year: 2112 },
-				endDate: { month: "Dec", year: 2112 },
+				startDate: { month: "Jan", year: "2112" },
+				endDate: { month: "Dec", year: "2112" },
 				skills: [
 					"Spearheaded numerous deep-space resource harvesting missions, consistently exceeding targets by 20% through the implementation of innovative asteroid mining techniques. Demonstrated expertise in operating and maintaining advanced space harvesting equipment, leading to a 15% increase in rare mineral extraction efficiency.",
 					"Led a diverse team of 15 space harvesters and engineers in high-stakes, off-world environments. Focused on fostering team cohesion and efficient work practices, which resulted in a 30% reduction in operational incidents. Developed and conducted comprehensive training programs for new team members, enhancing overall team performance and safety.",

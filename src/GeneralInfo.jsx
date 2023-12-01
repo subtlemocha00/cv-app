@@ -1,45 +1,34 @@
+import InputForm from "./InputForm";
+
 export default function GeneralInfo() {
+	// function handleSubmit() {
+	// const nameInput = document.getElementById("name-input");
+	// const headerName = document.getElementById("userName");
+	// const emailInput = document.getElementById("email-input").value;
+	// const phoneInput = document.getElementById("phone-input").value;
+	// const locationInput = document.getElementById("location-input").value;
+	// nameInput.addEventListener("keyup", () => {
+	// headerName.textContent = nameInput.value;
+	// console.log(emailInput, phoneInput, locationInput);
+	// });
+	// }
 	return (
 		<form key="general-form" className="form-control p-3 m-2">
-			<label htmlFor="name-input" className="form-label mx-2">
-				Name:
-			</label>
-			<input
-				id="name-input"
-				type="text"
-				className="form-control"
-				placeholder="Namey McNameface"
-			></input>
-			<label htmlFor="email-input" className="form-label mx-2">
-				Email:
-			</label>
-			<input
-				id="email-input"
-				type="email"
-				className="form-control"
-				placeholder="email_mcemailface@emailserver.com"
-			></input>
-			<label htmlFor="phone-input" className="form-label mx-2">
-				Phone Number:
-			</label>
-			<input
-				id="phone-input"
+			<InputForm input="Name" type="text" placeholder="Namey McNameface" />
+			<InputForm input="Email" type="email" placeholder="email@mcemail.face" />
+			<InputForm
+				input="Phone"
 				type="tel"
-				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-				className="form-control"
 				placeholder="555-123-4567"
-			></input>
-			<label htmlFor="user-location" className="form-label mx-2">
-				Location:
-			</label>
-			<input
-				id="user-location"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+			/>
+			<InputForm
+				input="Location"
 				type="text"
-				className="form-control"
-				placeholder="Cygnus-X1, Milky Way"
-			></input>
-			<button
-				// onClick={updateGeneral()}
+				placeholder="Cygnus X-1, Milky Way"
+			/>
+			{/* <button
+				onClick={handleSubmit}
 				type="button"
 				className="btn btn-info m-2 text-white border-white"
 			>
@@ -50,7 +39,7 @@ export default function GeneralInfo() {
 				className="btn btn-info m-2 text-white border-white"
 			>
 				Cancel
-			</button>
+			</button> */}
 		</form>
 	);
 }

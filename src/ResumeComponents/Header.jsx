@@ -6,8 +6,8 @@ export default function Header({ personalInfo }) {
 		personalInfo: PropTypes.arrayOf(
 			PropTypes.shape({
 				userName: PropTypes.string,
-				email: PropTypes.string,
-				phone: PropTypes.string,
+				userEmail: PropTypes.string,
+				userPhone: PropTypes.string,
 				userLocation: PropTypes.string,
 			})
 		),
@@ -16,13 +16,13 @@ export default function Header({ personalInfo }) {
 	return (
 		<section className="container p-0">
 			<div className="row m-0 p-2 col col-12">
-				<h1>{info.userName}</h1>
+				<h1 id="userName">{info.userName}</h1>
 				<div className="p-1 d-flex justify-content-around">
 					<h6>
-						<i className="fas fa-envelope"></i> {info.email}
+						<i className="fas fa-envelope"></i> {info.userEmail}
 					</h6>
 					<h6>
-						<i className="fas fa-phone"></i> {info.phone}
+						<i className="fas fa-phone"></i> {info.userPhone}
 					</h6>
 					<h6>
 						<i className="fas fa-map-marker"></i> {info.userLocation}

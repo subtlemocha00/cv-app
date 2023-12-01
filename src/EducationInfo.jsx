@@ -6,7 +6,7 @@ export default function EducationInfo() {
 					School:
 				</label>
 				<input
-					name="school-input"
+					id="school-input"
 					type="text"
 					className="form-control"
 					placeholder="University of School"
@@ -15,7 +15,7 @@ export default function EducationInfo() {
 					Location:
 				</label>
 				<input
-					name="school-location-input"
+					id="school-location-input"
 					type="text"
 					className="form-control"
 					placeholder="Somewhere, Over the Rainbow, Canada"
@@ -24,7 +24,7 @@ export default function EducationInfo() {
 					Degree:
 				</label>
 				<input
-					name="degree-input"
+					id="degree-input"
 					type="text"
 					className="form-control"
 					placeholder="Bachelor's of Stuff"
@@ -33,7 +33,7 @@ export default function EducationInfo() {
 					Start Date:
 				</label>
 				<input
-					name="start-input"
+					id="start-input"
 					type="text"
 					className="form-control"
 					placeholder="01-01-2020"
@@ -42,7 +42,7 @@ export default function EducationInfo() {
 					End Date:
 				</label>
 				<input
-					name="end-input"
+					id="end-input"
 					type="text"
 					className="form-control"
 					placeholder="21-12-2112"
@@ -51,7 +51,7 @@ export default function EducationInfo() {
 					Skills
 				</label>
 				<textarea
-					name="skills"
+					id="skills"
 					// type="textbox"
 					className="form-control"
 					placeholder="Describe key achievements or projects, e.g., 'Led a team research project on renewable energy sources, resulting in a published paper and an academic award."

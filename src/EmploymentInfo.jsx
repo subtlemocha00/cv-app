@@ -52,7 +52,7 @@ export default function EmploymentInfo() {
 				</label>
 
 				<textarea
-					name="job-skills"
+					id="job-skills"
 					className="form-control"
 					placeholder="Detail your key responsibilities and achievements, e.g., 'Managed a team of 10 in developing marketing strategies, resulting in a 20% increase in annual sales."
 				></textarea>
