@@ -6,6 +6,14 @@ export default function InputForm({
 	placeholder = ". . .",
 	pattern = null,
 }) {
+	function handleChange() {
+		const inputValue = document.getElementById(
+			input.toLowerCase() + "Input"
+		).value;
+		const targetText = document.getElementById(input.toLowerCase());
+		targetText.innerHTML = inputValue;
+		// console.log(input.toLowerCase());
+	}
 	return (
 		<>
 			<label
@@ -20,7 +28,7 @@ export default function InputForm({
 				className="form-control"
 				placeholder={placeholder}
 				pattern={pattern}
-				onChange={""}
+				onChange={handleChange}
 			></input>
 		</>
 	);
