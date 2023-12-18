@@ -24,7 +24,7 @@ export default function InputForm({
 			</label>
 			<input
 				id={input.toLowerCase() + "Input"}
-				type="text"
+				type={type}
 				className="form-control"
 				placeholder={placeholder}
 				pattern={pattern}
