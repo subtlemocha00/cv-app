@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useRef } from "react";
 
 export default function EmploymentContent({ employmentInfo }) {
 	EmploymentContent.propTypes = {
@@ -20,6 +21,7 @@ export default function EmploymentContent({ employmentInfo }) {
 			})
 		),
 	};
+	const employmentList = useRef(employmentList);
 
 	const jobInfo = [...employmentInfo];
 	return (
@@ -44,7 +46,7 @@ export default function EmploymentContent({ employmentInfo }) {
 							</em>
 						</span>
 					</div>
-					<ul>
+					<ul ref={employmentList}>
 						{job.skills.map((skill) => (
 							<li key={skill.length} className="m-2">
 								{skill}
