@@ -16,7 +16,7 @@ export default function Header({ personalInfo }) {
 	return (
 		<section className="container p-0">
 			<div className="row m-0 p-2 col col-12">
-				<h1 id="userName">{info.userName}</h1>
+				<h1 id="name">{info.userName}</h1>
 				<div className="p-1 d-flex justify-content-around">
 					<h6>
 						<i className="fas fa-envelope"></i> {info.userEmail}
