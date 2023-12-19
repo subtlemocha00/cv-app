@@ -21,7 +21,7 @@ export default function EmploymentContent({ employmentInfo }) {
 			})
 		),
 	};
-	const employmentList = useRef(employmentList);
+	const employmentList = useRef(employmentInfo);
 
 	const jobInfo = [...employmentInfo];
 	return (
