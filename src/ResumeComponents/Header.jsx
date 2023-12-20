@@ -19,13 +19,16 @@ export default function Header({ personalInfo }) {
 				<h1 id="name">{info.userName}</h1>
 				<div className="p-1 d-flex justify-content-around">
 					<h6>
-						<i className="fas fa-envelope"></i> {info.userEmail}
+						<i className="fas fa-envelope"></i>{" "}
+						<span id="email">{info.userEmail}</span>
 					</h6>
 					<h6>
-						<i className="fas fa-phone"></i> {info.userPhone}
+						<i className="fas fa-phone"></i>{" "}
+						<span id="phone">{info.userPhone}</span>
 					</h6>
 					<h6>
-						<i className="fas fa-map-marker"></i> {info.userLocation}
+						<i className="fas fa-map-marker"></i>{" "}
+						<span id="location">{info.userLocation}</span>
 					</h6>
 				</div>
 			</div>
