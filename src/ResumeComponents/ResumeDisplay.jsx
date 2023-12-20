@@ -3,6 +3,7 @@ import Header from "./Header";
 import EmploymentContent from "./EmploymentContent";
 import EducationContent from "./EducationContent";
 import "./ResumeDisplay.css";
+import { useState } from "react";
 
 export default function ResumeDisplay({
 	personalInfo,
@@ -54,6 +55,7 @@ export default function ResumeDisplay({
 			})
 		),
 	};
+	// const [employmentInfo, setEmploymentInfo] = useState({});
 	return (
 		<div className="d-flex flex-column w-75 ms-3">
 			<Header personalInfo={personalInfo} />

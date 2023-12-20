@@ -1,15 +1,7 @@
 import { useState } from "react";
+import AddContentForm from "./AddContentForm";
 
 export default function EmploymentInfo() {
-	const [formData, setFormData] = useState({
-		// companyName,
-		// location,
-		// title,
-		// start,
-		// end,
-		// skills,
-	});
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 	};
@@ -21,51 +13,23 @@ export default function EmploymentInfo() {
 				onSubmit={handleSubmit}
 				className="form-control p-3 m-2"
 			>
-				<label htmlFor="companyName" className="form-label mx-2">
-					Company:
-				</label>
-				<input
-					id="companyName"
+				<AddContentForm
+					input="Company"
 					type="text"
-					className="form-control"
 					placeholder="Temples of Syrinx"
-				></input>
-				<label htmlFor="companyLocation" className="form-label mx-2">
-					Location:
-				</label>
-				<input
-					id="companyLocation"
+				/>
+				<AddContentForm
+					input="Location"
 					type="text"
-					className="form-control"
 					placeholder="Cygnus-X1, Milky Way"
-				></input>
-				<label htmlFor="title" className="form-label mx-2">
-					Title:
-				</label>
-				<input
-					id="title"
+				/>
+				<AddContentForm input="Title" type="text" placeholder="Working Man" />
+				<AddContentForm
+					input="Start Date"
 					type="text"
-					className="form-control"
-					placeholder="Lead Worker"
-				></input>
-				<label htmlFor="jobStart" className="form-label mx-2">
-					Start Date:
-				</label>
-				<input
-					id="jobStart"
-					type="text"
-					className="form-control"
 					placeholder="21-12-2112"
-				></input>
-				<label htmlFor="jobEnd" className="form-label mx-2">
-					End Date:
-				</label>
-				<input
-					id="jobEnd"
-					type="text"
-					className="form-control"
-					placeholder="Present"
-				></input>
+				/>
+				<AddContentForm input="End Date" type="text" placeholder="Present" />
 				<label htmlFor="jobSkills" className="form-label mx-2">
 					Job Skills
 				</label>

@@ -14,8 +14,8 @@ function App() {
 			<div className="d-flex">
 				<div className="d-flex flex-column w-25">
 					<GeneralInfo />
-					<EducationInfo />
 					<EmploymentInfo />
+					<EducationInfo />
 				</div>
 				<ResumeDisplay
 					personalInfo={defaultData[0].personalInfo}

@@ -1,4 +1,4 @@
-export default function InputForm({
+export default function AddContentForm({
 	input,
 	type = "text",
 	placeholder = ". . .",
@@ -26,7 +26,7 @@ export default function InputForm({
 				className="form-control"
 				placeholder={placeholder}
 				pattern={pattern}
-				onChange={handleChange}
+				// onChange={handleChange}
 			></input>
 		</>
 	);

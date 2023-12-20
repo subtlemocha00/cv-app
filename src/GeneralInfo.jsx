@@ -16,19 +16,6 @@ export default function GeneralInfo() {
 				type="text"
 				placeholder="Cygnus X-1, Milky Way"
 			/>
-			{/* <button
-				onClick={handleSubmit}
-				type="button"
-				className="btn btn-info m-2 text-white border-white"
-			>
-				<i className="fas fa-plus"></i>
-			</button>
-			<button
-				type="button"
-				className="btn btn-info m-2 text-white border-white"
-			>
-				Cancel
-			</button> */}
 		</form>
 	);
 }
