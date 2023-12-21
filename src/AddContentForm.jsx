@@ -4,31 +4,21 @@ export default function AddContentForm({
 	placeholder = ". . .",
 	value,
 	pattern = null,
-	handleSubmit,
+	onChange,
 }) {
-	function handleClick() {
-		const inputValue = document.getElementById(
-			input.toLowerCase() + "Input"
-		).value;
-		const targetText = document.getElementById(input.toLowerCase());
-		targetText.innerHTML = inputValue;
-		// console.log(input.toLowerCase());
-	}
 	return (
 		<>
-			<label
-				htmlFor={input.toLowerCase() + "Input"}
-				className="form-label mx-2"
-			>
+			<label htmlFor={input} className="form-label mx-2 mt-2">
 				{input}:
 			</label>
 			<input
-				id={input.toLowerCase() + "Input"}
+				id={input}
 				type={type}
 				className="form-control"
 				placeholder={placeholder}
 				value={value}
 				pattern={pattern}
+				onChange={onChange}
 			></input>
 		</>
 	);

@@ -11,9 +11,17 @@ export default function EmploymentInfo() {
 		jobSkills: "",
 	});
 
+	const handleChange = (e) => {
+		console.log(e.target.id, " ", e.target.value);
+		const { id, value } = e.target;
+		setEmploymentData((prevData) => ({
+			...prevData,
+			[id]: value,
+		}));
+	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// setEmploymentData()
+		console.log(employmentData);
 	};
 
 	return (
@@ -24,22 +32,35 @@ export default function EmploymentInfo() {
 				className="form-control p-3 m-2"
 			>
 				<AddContentForm
-					input="Company"
+					input="company"
 					type="text"
 					placeholder="Temples of Syrinx"
+					onChange={handleChange}
 				/>
 				<AddContentForm
-					input="Location"
+					input="location"
 					type="text"
 					placeholder="Cygnus-X1, Milky Way"
+					onChange={handleChange}
 				/>
-				<AddContentForm input="Title" type="text" placeholder="Working Man" />
 				<AddContentForm
-					input="Start Date"
+					input="title"
+					type="text"
+					placeholder="Working Man"
+					onChange={handleChange}
+				/>
+				<AddContentForm
+					input="startDate"
 					type="text"
 					placeholder="21-12-2112"
+					onChange={handleChange}
 				/>
-				<AddContentForm input="End Date" type="text" placeholder="Present" />
+				<AddContentForm
+					input="endDate"
+					type="text"
+					placeholder="Present"
+					onChange={handleChange}
+				/>
 				<label htmlFor="jobSkills" className="form-label mx-2">
 					Job Skills
 				</label>
@@ -47,12 +68,12 @@ export default function EmploymentInfo() {
 					id="jobSkills"
 					className="form-control"
 					placeholder="Detail your key responsibilities and achievements, e.g., 'Managed a team of 10 in developing marketing strategies, resulting in a 20% increase in annual sales."
+					onChange={handleChange}
 				></textarea>
 
 				<button
 					type="submit"
 					className="btn btn-info m-2 text-white border-white"
-					// onClick={handleSubmit}
 				>
 					<i className="fas fa-plus"></i>
 				</button>

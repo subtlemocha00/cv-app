@@ -3,7 +3,6 @@ import Header from "./Header";
 import EmploymentContent from "./EmploymentContent";
 import EducationContent from "./EducationContent";
 import "./ResumeDisplay.css";
-import { useState } from "react";
 
 export default function ResumeDisplay({
 	personalInfo,
