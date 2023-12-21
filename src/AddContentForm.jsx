@@ -2,9 +2,11 @@ export default function AddContentForm({
 	input,
 	type = "text",
 	placeholder = ". . .",
+	value,
 	pattern = null,
+	handleSubmit,
 }) {
-	function handleChange() {
+	function handleClick() {
 		const inputValue = document.getElementById(
 			input.toLowerCase() + "Input"
 		).value;
@@ -25,8 +27,8 @@ export default function AddContentForm({
 				type={type}
 				className="form-control"
 				placeholder={placeholder}
+				value={value}
 				pattern={pattern}
-				// onChange={handleChange}
 			></input>
 		</>
 	);

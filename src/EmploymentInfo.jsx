@@ -2,8 +2,18 @@ import { useState } from "react";
 import AddContentForm from "./AddContentForm";
 
 export default function EmploymentInfo() {
+	const [employmentData, setEmploymentData] = useState({
+		company: "",
+		location: "",
+		title: "",
+		startDate: "",
+		endDate: "",
+		jobSkills: "",
+	});
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		// setEmploymentData()
 	};
 
 	return (
@@ -33,7 +43,6 @@ export default function EmploymentInfo() {
 				<label htmlFor="jobSkills" className="form-label mx-2">
 					Job Skills
 				</label>
-
 				<textarea
 					id="jobSkills"
 					className="form-control"
@@ -43,6 +52,7 @@ export default function EmploymentInfo() {
 				<button
 					type="submit"
 					className="btn btn-info m-2 text-white border-white"
+					// onClick={handleSubmit}
 				>
 					<i className="fas fa-plus"></i>
 				</button>
