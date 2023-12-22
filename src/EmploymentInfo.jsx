@@ -12,7 +12,6 @@ export default function EmploymentInfo() {
 	});
 
 	const handleChange = (e) => {
-		console.log(e.target.id, " ", e.target.value);
 		const { id, value } = e.target;
 		setEmploymentData((prevData) => ({
 			...prevData,

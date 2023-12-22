@@ -8,9 +8,10 @@ export default function InputForm({
 		const inputValue = document.getElementById(
 			input.toLowerCase() + "Input"
 		).value;
+		console.log(inputValue);
 		const targetText = document.getElementById(input.toLowerCase());
+		console.log(targetText);
 		targetText.innerHTML = inputValue;
-		// console.log(input.toLowerCase());
 	}
 	return (
 		<>
