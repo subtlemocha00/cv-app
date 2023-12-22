@@ -6,16 +6,9 @@ export default function EducationContent(props) {
 			PropTypes.shape({
 				university: PropTypes.string,
 				title: PropTypes.string,
-				city: PropTypes.string,
-				country: PropTypes.string,
-				startDate: PropTypes.shape({
-					month: PropTypes.string,
-					year: PropTypes.string,
-				}),
-				endDate: PropTypes.shape({
-					month: PropTypes.string,
-					year: PropTypes.string,
-				}),
+				location: PropTypes.string,
+				startDate: PropTypes.string,
+				endDate: PropTypes.string,
 				skills: PropTypes.arrayOf(PropTypes.string),
 			})
 		),
@@ -33,14 +26,11 @@ export default function EducationContent(props) {
 					<h5 className="m-2">{education.title}</h5>
 					<div className="row p-2">
 						<span className="col col-fluid ms-2">
-							<em>
-								{education.city}, {education.country}
-							</em>
+							<em>{education.location}</em>
 						</span>
 						<span className="col col-fluid text-end me-2">
 							<em>
-								{education.startDate.month} {education.startDate.year} -{" "}
-								{education.endDate.month} {education.endDate.year}
+								{education.startDate} - {education.endDate}
 							</em>
 						</span>
 					</div>

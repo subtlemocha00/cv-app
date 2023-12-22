@@ -9,10 +9,9 @@ const defaultData = {
 		{
 			university: "Syrinx University",
 			title: "Spice Specialist",
-			city: "Xanadu",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "2102" },
-			endDate: { month: "Dec", year: "2106" },
+			location: "Xanadu, Alpha Centauri",
+			startDate: "Jan 2102",
+			endDate: "Dec 2106",
 			skills: [
 				"Graduated with honors in 2022. Specialized in the study of interstellar spice cultivation and processing techniques. Completed a comprehensive curriculum covering areas such as exotic spice biochemistry, astro-agricultural methods, and sustainable harvesting practices in varied planetary ecosystems.",
 				"Conducted groundbreaking research on optimizing spice yields in low-gravity conditions. This thesis was recognized for its innovative approach and potential applications in space-based agricultural systems, receiving the university's prestigious Academic Excellence Award in Spice Studies.",
@@ -22,10 +21,9 @@ const defaultData = {
 		{
 			university: "Signals College",
 			title: "Orbital Collection",
-			city: "Planet Y",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "0111110" },
-			endDate: { month: "Dec", year: "1000000" },
+			location: "Zanzibar, Alpha Centauri",
+			startDate: "Jan 0111110",
+			endDate: "Dec 1000000",
 			skills: [
 				"Successfully completed the intensive program in 2021 with a focus on orbital mechanics, space debris management, and satellite technology. Gained proficiency in state-of-the-art orbital collection tools and techniques, including remote sensing and automated debris retrieval systems.",
 				"Led a team project that developed an innovative model for optimizing the orbital paths of collection units, increasing debris collection efficiency by 30%. The project was acclaimed for its practical application potential and received the college’s Award for Innovation in Orbital Sciences.",
@@ -37,10 +35,9 @@ const defaultData = {
 		{
 			company: "Red Star Capital",
 			title: "Space Harvester",
-			city: "Planet X",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "2112" },
-			endDate: { month: "Dec", year: "2112" },
+			location: "Planet X, Alpha Centauri",
+			startDate: "Jan 2112",
+			endDate: "Dec 2112",
 			skills: [
 				"Spearheaded numerous deep-space resource harvesting missions, consistently exceeding targets by 20% through the implementation of innovative asteroid mining techniques. Demonstrated expertise in operating and maintaining advanced space harvesting equipment, leading to a 15% increase in rare mineral extraction efficiency.",
 				"Led a diverse team of 15 space harvesters and engineers in high-stakes, off-world environments. Focused on fostering team cohesion and efficient work practices, which resulted in a 30% reduction in operational incidents. Developed and conducted comprehensive training programs for new team members, enhancing overall team performance and safety.",
@@ -51,10 +48,9 @@ const defaultData = {
 		{
 			company: "Blue Star Capital",
 			title: "Orbital Collector",
-			city: "Planet Y",
-			country: "Alpha Centauri",
-			startDate: { month: "Jan", year: "1000010" },
-			endDate: { month: "Dec", year: "1000011" },
+			location: "Planet Y, Alpha Centauri",
+			startDate: "Jan 1000010",
+			endDate: "Dec 1000011",
 			skills: [
 				"Expertly managed the execution of complex orbital collection missions, resulting in a 25% increase in resource acquisition over two years. Skilled in the use of cutting-edge satellite technology and orbital mechanics to optimize collection routes and strategies, significantly enhancing efficiency and reducing operational costs.",
 				"Acted as the primary liaison between space operations, engineering teams, and R&D departments, ensuring seamless integration of new technologies into collection missions. Successfully led cross-functional teams in the development and deployment of innovative orbital collection systems, which increased collection capacity by 35%.",

@@ -8,12 +8,16 @@ import { useState } from "react";
 
 export default function ResumeDisplay() {
 	const [userInfo, setUserInfo] = useState(defaultData);
-	const { personalInfo, educationInfo, employmentInfo } = userInfo;
+	let { personalInfo, educationInfo, employmentInfo } = userInfo;
 	// console.log("Personal Info: ", personalInfo);
+	// const handleChange = () => {};
 	return (
 		<div className="d-flex flex-column w-75 ms-3">
 			<Header personalInfo={personalInfo} onChange={setUserInfo} />
-			<EmploymentContent employmentInfo={employmentInfo} />
+			<EmploymentContent
+				employmentInfo={employmentInfo}
+				onChange={setUserInfo}
+			/>
 			<EducationContent educationInfo={educationInfo} />
 		</div>
 	);

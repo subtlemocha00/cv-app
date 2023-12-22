@@ -1,22 +1,14 @@
 import PropTypes from "prop-types";
-import { useRef } from "react";
 
 export default function EmploymentContent({ employmentInfo }) {
 	EmploymentContent.propTypes = {
 		employmentInfo: PropTypes.arrayOf(
 			PropTypes.shape({
 				company: PropTypes.string,
-				title: PropTypes.string,
-				city: PropTypes.string,
+				location: PropTypes.string,
 				country: PropTypes.string,
-				startDate: PropTypes.shape({
-					month: PropTypes.string,
-					year: PropTypes.string,
-				}),
-				endDate: PropTypes.shape({
-					month: PropTypes.string,
-					year: PropTypes.string,
-				}),
+				startDate: PropTypes.string,
+				endDate: PropTypes.string,
 				skills: PropTypes.arrayOf(PropTypes.string),
 			})
 		),
@@ -34,14 +26,11 @@ export default function EmploymentContent({ employmentInfo }) {
 					<h5 className="m-2">{job.title}</h5>
 					<div className="row p-2">
 						<span className="col col-fluid ms-2">
-							<em>
-								{job.city}, {job.country}
-							</em>
+							<em>{job.location}</em>
 						</span>
 						<span className="col col-fluid text-end me-2">
 							<em>
-								{job.startDate.month} {job.startDate.year} - {job.endDate.month}{" "}
-								{job.endDate.year}
+								{job.startDate} - {job.endDate}
 							</em>
 						</span>
 					</div>
