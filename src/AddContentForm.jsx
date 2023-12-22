@@ -8,11 +8,11 @@ export default function AddContentForm({
 }) {
 	return (
 		<>
-			<label htmlFor={input} className="form-label mx-2 mt-2">
+			<label htmlFor={input + "Input"} className="form-label mx-2 mt-2">
 				{input}:
 			</label>
 			<input
-				id={input}
+				id={input + "Input"}
 				type={type}
 				className="form-control"
 				placeholder={placeholder}
