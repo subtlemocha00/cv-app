@@ -21,7 +21,6 @@ export default function EmploymentContent({ employmentInfo }) {
 			})
 		),
 	};
-	const employmentList = useRef(employmentInfo);
 
 	const jobInfo = [...employmentInfo];
 	return (
@@ -46,7 +45,7 @@ export default function EmploymentContent({ employmentInfo }) {
 							</em>
 						</span>
 					</div>
-					<ul ref={employmentList}>
+					<ul>
 						{job.skills.map((skill) => (
 							<li key={skill.length} className="m-2">
 								{skill}
