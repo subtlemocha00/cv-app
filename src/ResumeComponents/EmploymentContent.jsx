@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function EmploymentContent({ employmentInfo }) {
+export default function EmploymentContent({ employmentInfo, deleteContent }) {
 	EmploymentContent.propTypes = {
 		employmentInfo: PropTypes.arrayOf(
 			PropTypes.shape({
@@ -14,14 +14,26 @@ export default function EmploymentContent({ employmentInfo }) {
 		),
 	};
 
-	const jobInfo = [...employmentInfo];
+	const handleDelete = (e) => {
+		deleteContent(e);
+	};
+
+	console.log(employmentInfo);
+
 	return (
 		<section>
 			<h3 className="bg-secondary row m-0 mt-1 p-3 text-white col col-12">
 				Employment
 			</h3>
-			{jobInfo.map((job, index) => (
-				<div key={index}>
+			{employmentInfo.map((job, index) => (
+				<div key={job.id}>
+					<button
+						onClick={handleDelete}
+						className="position-absolute mx-3 end-0"
+						id={job.id}
+					>
+						X
+					</button>
 					<h4 className="m-2">{job.company}</h4>
 					<h5 className="m-2">{job.title}</h5>
 					<div className="row p-2">

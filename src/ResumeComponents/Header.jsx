@@ -10,7 +10,6 @@ export default function Header({ personalInfo }) {
 			userLocation: PropTypes.string,
 		}),
 	};
-	console.log("personal info HEADER: ", personalInfo);
 	return (
 		<section className="container p-0">
 			<div className="row m-0 p-2 col col-12">

@@ -16,7 +16,7 @@ export default function AddContentForm({
 				type={type}
 				className="form-control"
 				placeholder={placeholder}
-				value={value}
+				// value={value}
 				pattern={pattern}
 				onChange={onChange}
 			></input>

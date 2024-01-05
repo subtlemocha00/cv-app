@@ -1,13 +1,13 @@
 import { useState } from "react";
 import AddContentForm from "./AddContentForm";
 
-export default function EmploymentInfo() {
+export default function EmploymentInfo({ handleSubmit }) {
 	const [employmentData, setEmploymentData] = useState({
-		company: "",
-		location: "",
-		title: "",
-		startDate: "",
-		endDate: "",
+		companyInput: "",
+		locationInput: "",
+		titleInput: "",
+		startDateInput: "",
+		endDateInput: "",
 		jobSkills: "",
 	});
 
@@ -18,16 +18,18 @@ export default function EmploymentInfo() {
 			[id]: value,
 		}));
 	};
-	const handleSubmit = (e) => {
+
+	const handleLocalSubmit = (e) => {
 		e.preventDefault();
-		console.log(employmentData);
+		// console.log(employmentData);
+		handleSubmit(employmentData);
 	};
 
 	return (
 		<div>
 			<form
 				key="employment-form"
-				onSubmit={handleSubmit}
+				onSubmit={handleLocalSubmit}
 				className="form-control p-3 m-2"
 			>
 				<AddContentForm

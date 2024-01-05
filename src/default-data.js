@@ -44,6 +44,7 @@ const defaultData = {
 				"Utilized complex data analysis tools to interpret astrogeological data, contributing to the identification and selection of lucrative mining sites. Prepared detailed reports on mission outcomes and resource yields, providing valuable insights that informed the company’s strategic planning and decision-making processes.",
 				"Successfully navigated numerous emergency scenarios, including equipment failures and unexpected space weather conditions, by quickly devising and implementing effective solutions. This proactive approach minimized resource loss, safeguarded team safety, and maintained operational continuity under challenging circumstances.",
 			],
+			id: "a1b2",
 		},
 		{
 			company: "Blue Star Capital",
@@ -57,6 +58,7 @@ const defaultData = {
 				"Utilized advanced data analytics to monitor orbital debris patterns and optimize collection schedules, achieving a 40% reduction in risk of collisions. Conducted thorough analysis of mission data to identify trends and opportunities for process improvements, contributing to continuous operational enhancements.",
 				"Pioneered the development and implementation of autonomous AI-driven collection drones, resulting in a 50% increase in collection efficiency and a significant reduction in manual operation errors. Demonstrated exceptional problem-solving skills during critical mission scenarios, ensuring the safety of the equipment and continuity of operations.",
 			],
+			id: "a2b3",
 		},
 	],
 };
