@@ -10,7 +10,7 @@ export default function EmploymentInfo({ handleSubmit }) {
 		startDateInput: "",
 		endDateInput: "",
 		jobSkills: "",
-		id: uuidv4(),
+		id: "",
 	});
 
 	const handleChange = (e) => {
@@ -30,8 +30,11 @@ export default function EmploymentInfo({ handleSubmit }) {
 
 	const handleLocalSubmit = (e) => {
 		e.preventDefault();
-		// console.log(employmentData);
-		handleSubmit(employmentData);
+		setEmploymentData((prevData) => {
+			const newDataWithId = { ...prevData, id: uuidv4() };
+			handleSubmit(newDataWithId);
+			return newDataWithId;
+		});
 	};
 
 	return (
@@ -79,6 +82,7 @@ export default function EmploymentInfo({ handleSubmit }) {
 					className="form-control"
 					placeholder="Detail your key responsibilities and achievements, e.g., 'Managed a team of 10 in developing marketing strategies, resulting in a 20% increase in annual sales."
 					onChange={handleChange}
+					required
 				></textarea>
 
 				<button

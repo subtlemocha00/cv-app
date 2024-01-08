@@ -24,23 +24,16 @@ function App() {
 	const [personalInfo, setPersonalInfo] = useState(defaultData.personalInfo);
 	const [employment, setEmployment] = useState(defaultData.employmentInfo);
 	const [education, setEducation] = useState(defaultData.educationInfo);
-	console.log(employment);
 	const handleEmploymentSubmit = (newData) => {
 		setEmployment((prevState) => [...prevState, newData]);
 	};
 	const deleteContent = (e) => {
 		const elementId = e.target.id;
-		console.log(elementId);
-		// console.log(employmentData);
-		// const updatedEmploymentData = employmentData.filter((job) => {
-		// 	job.id !== elementId;
-		// });
-		// console.log(updatedEmploymentData);
+		const updatedEmploymentData = employment.filter((job) => {
+			return job.id !== elementId;
+		});
+		setEmployment(updatedEmploymentData);
 	};
-
-	useEffect(() => {
-		// console.log("ED ", employmentData);
-	}, [employmentData]);
 
 	return (
 		<div>
