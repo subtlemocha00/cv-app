@@ -34,20 +34,20 @@ export default function EmploymentContent({ employmentInfo, deleteContent }) {
 					>
 						X
 					</button>
-					<h4 className="m-2">{job.company}</h4>
-					<h5 className="m-2">{job.title}</h5>
+					<h4 className="m-2">{job.companyInput}</h4>
+					<h5 className="m-2">{job.titleInput}</h5>
 					<div className="row p-2">
 						<span className="col col-fluid ms-2">
-							<em>{job.location}</em>
+							<em>{job.locationInput}</em>
 						</span>
 						<span className="col col-fluid text-end me-2">
 							<em>
-								{job.startDate} - {job.endDate}
+								{job.startDateInput} - {job.endDateInput}
 							</em>
 						</span>
 					</div>
 					<ul>
-						{job.skills.map((skill) => (
+						{job.jobSkills.map((skill) => (
 							<li key={skill.length} className="m-2">
 								{skill}
 							</li>

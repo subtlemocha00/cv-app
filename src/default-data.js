@@ -33,12 +33,12 @@ const defaultData = {
 	],
 	employmentInfo: [
 		{
-			company: "Red Star Capital",
-			title: "Space Harvester",
-			location: "Planet X, Alpha Centauri",
-			startDate: "Jan 2112",
-			endDate: "Dec 2112",
-			skills: [
+			companyInput: "Red Star Capital",
+			titleInput: "Space Harvester",
+			locationInput: "Planet X, Alpha Centauri",
+			startDateInput: "Jan 2112",
+			endDateInput: "Dec 2112",
+			jobSkills: [
 				"Spearheaded numerous deep-space resource harvesting missions, consistently exceeding targets by 20% through the implementation of innovative asteroid mining techniques. Demonstrated expertise in operating and maintaining advanced space harvesting equipment, leading to a 15% increase in rare mineral extraction efficiency.",
 				"Led a diverse team of 15 space harvesters and engineers in high-stakes, off-world environments. Focused on fostering team cohesion and efficient work practices, which resulted in a 30% reduction in operational incidents. Developed and conducted comprehensive training programs for new team members, enhancing overall team performance and safety.",
 				"Utilized complex data analysis tools to interpret astrogeological data, contributing to the identification and selection of lucrative mining sites. Prepared detailed reports on mission outcomes and resource yields, providing valuable insights that informed the company’s strategic planning and decision-making processes.",
@@ -47,12 +47,12 @@ const defaultData = {
 			id: "a1b2",
 		},
 		{
-			company: "Blue Star Capital",
-			title: "Orbital Collector",
-			location: "Planet Y, Alpha Centauri",
-			startDate: "Jan 1000010",
-			endDate: "Dec 1000011",
-			skills: [
+			companyInput: "Blue Star Capital",
+			titleInput: "Orbital Collector",
+			locationInput: "Planet Y, Alpha Centauri",
+			startDateInput: "Jan 1000010",
+			endDateInput: "Dec 1000011",
+			jobSkills: [
 				"Expertly managed the execution of complex orbital collection missions, resulting in a 25% increase in resource acquisition over two years. Skilled in the use of cutting-edge satellite technology and orbital mechanics to optimize collection routes and strategies, significantly enhancing efficiency and reducing operational costs.",
 				"Acted as the primary liaison between space operations, engineering teams, and R&D departments, ensuring seamless integration of new technologies into collection missions. Successfully led cross-functional teams in the development and deployment of innovative orbital collection systems, which increased collection capacity by 35%.",
 				"Utilized advanced data analytics to monitor orbital debris patterns and optimize collection schedules, achieving a 40% reduction in risk of collisions. Conducted thorough analysis of mission data to identify trends and opportunities for process improvements, contributing to continuous operational enhancements.",

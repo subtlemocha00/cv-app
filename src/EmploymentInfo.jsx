@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddContentForm from "./AddContentForm";
+import { v4 as uuidv4 } from "uuid";
 
 export default function EmploymentInfo({ handleSubmit }) {
 	const [employmentData, setEmploymentData] = useState({
@@ -9,14 +10,22 @@ export default function EmploymentInfo({ handleSubmit }) {
 		startDateInput: "",
 		endDateInput: "",
 		jobSkills: "",
+		id: uuidv4(),
 	});
 
 	const handleChange = (e) => {
 		const { id, value } = e.target;
-		setEmploymentData((prevData) => ({
-			...prevData,
-			[id]: value,
-		}));
+		if (id === "jobSkills") {
+			setEmploymentData((prevData) => ({
+				...prevData,
+				[id]: [value],
+			}));
+		} else {
+			setEmploymentData((prevData) => ({
+				...prevData,
+				[id]: value,
+			}));
+		}
 	};
 
 	const handleLocalSubmit = (e) => {
