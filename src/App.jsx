@@ -7,43 +7,46 @@ import EducationInfo from "./EducationInfo.jsx";
 import Header from "./ResumeComponents/Header.jsx";
 import EmploymentContent from "./ResumeComponents/EmploymentContent.jsx";
 import EducationContent from "./ResumeComponents/EducationContent.jsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import defaultData from "./default-data";
 
 function App() {
-	console.log(defaultData);
-	const [employmentData, setEmploymentData] = useState({
-		companyInput: "",
-		locationInput: "",
-		titleInput: "",
-		startDateInput: "",
-		endDateInput: "",
-		jobSkills: "",
-		id: null,
-	});
 	const [personalInfo, setPersonalInfo] = useState(defaultData.personalInfo);
 	const [employment, setEmployment] = useState(defaultData.employmentInfo);
 	const [education, setEducation] = useState(defaultData.educationInfo);
 	const handleEmploymentSubmit = (newData) => {
 		setEmployment((prevState) => [...prevState, newData]);
 	};
-	const deleteContent = (e) => {
-		const elementId = e.target.id;
-		const updatedEmploymentData = employment.filter((job) => {
-			return job.id !== elementId;
+	const handleEducationSubmit = (newData) => {
+		setEducation((prevState) => [...prevState, newData]);
+	};
+	const deleteContent = (data, id, setData) => {
+		const updatedData = data.filter((datum) => {
+			return datum.id !== id;
 		});
-		setEmployment(updatedEmploymentData);
+		setData(updatedData);
+	};
+	const clearResume = (id = "!") => {
+		const updatedEdData = education.filter((datum) => {
+			return datum.id === id;
+		});
+		const updatedEmpData = employment.filter((datum) => {
+			return datum.id === id;
+		});
+		setEducation(updatedEdData);
+		setEmployment(updatedEmpData);
 	};
 
 	return (
 		<div>
 			<TitleBlock />
+			<button onClick={clearResume}>CLEAR RESUME</button>
 			<div className="d-flex">
 				{/* Input Elements */}
 				<div className="d-flex flex-column w-25">
 					<GeneralInfo />
 					<EmploymentInfo handleSubmit={handleEmploymentSubmit} />
-					<EducationInfo />
+					<EducationInfo handleSubmit={handleEducationSubmit} />
 				</div>
 				{/* Resume Display Elements */}
 				<div className="d-flex flex-column w-75 ms-3">
@@ -51,8 +54,13 @@ function App() {
 					<EmploymentContent
 						employmentInfo={employment}
 						deleteContent={deleteContent}
+						setData={setEmployment}
 					/>
-					<EducationContent educationInfo={education} />
+					<EducationContent
+						educationInfo={education}
+						deleteContent={deleteContent}
+						setData={setEducation}
+					/>
 				</div>
 			</div>
 		</div>

@@ -30,11 +30,8 @@ export default function EmploymentInfo({ handleSubmit }) {
 
 	const handleLocalSubmit = (e) => {
 		e.preventDefault();
-		setEmploymentData((prevData) => {
-			const newDataWithId = { ...prevData, id: uuidv4() };
-			handleSubmit(newDataWithId);
-			return newDataWithId;
-		});
+		const newDataWithId = { ...employmentData, id: uuidv4() };
+		handleSubmit(newDataWithId);
 	};
 
 	return (
@@ -49,30 +46,35 @@ export default function EmploymentInfo({ handleSubmit }) {
 					type="text"
 					placeholder="Temples of Syrinx"
 					onChange={handleChange}
+					required
 				/>
 				<AddContentForm
 					input="location"
 					type="text"
 					placeholder="Cygnus-X1, Milky Way"
 					onChange={handleChange}
+					required
 				/>
 				<AddContentForm
 					input="title"
 					type="text"
 					placeholder="Working Man"
 					onChange={handleChange}
+					required
 				/>
 				<AddContentForm
 					input="startDate"
 					type="text"
 					placeholder="21-12-2112"
 					onChange={handleChange}
+					required
 				/>
 				<AddContentForm
 					input="endDate"
 					type="text"
 					placeholder="Present"
 					onChange={handleChange}
+					required
 				/>
 				<label htmlFor="jobSkills" className="form-label mx-2">
 					Job Skills
