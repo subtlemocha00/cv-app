@@ -36,11 +36,20 @@ function App() {
 		setEducation(updatedEdData);
 		setEmployment(updatedEmpData);
 	};
+	const defaultResume = () => {
+		setEmployment(defaultData.employmentInfo);
+		setEducation(defaultData.educationInfo);
+	};
 
 	return (
 		<div>
 			<TitleBlock />
-			<button onClick={clearResume}>CLEAR RESUME</button>
+			<button onClick={clearResume} className="m-2">
+				CLEAR RESUME
+			</button>
+			<button onClick={defaultResume} className="m-2">
+				DEFAULT RESUME
+			</button>
 			<div className="d-flex">
 				{/* Input Elements */}
 				<div className="d-flex flex-column w-25">
